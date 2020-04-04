@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
 
 body {
 	background-color: #eff3f5!important;
@@ -76,7 +75,7 @@ section#welcome #align-logo  #palco .title h1 {
 }
 
 section#welcome #align-logo  #palco .title p {
-	color: #00a8ff;
+	color: #3267f9;
 	font-size: 13px;
 	font-weight: 600;
 	text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
@@ -108,7 +107,7 @@ section#form-login .login-form {
 }
 
 section#form-login .title {
-	background-color: #0097e6;
+	background-color: #3267f9;
 	background-image: url(../images/header/floor.png);
 	height: 30%;
 	position: relative;
@@ -124,7 +123,7 @@ section#form-login .title::before {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	background-image: linear-gradient(to right, #0097e6 30%, transparent);
+	background-image: linear-gradient(to right, #3267f9 30%, transparent);
 	z-index: -1;
 	top: 0;
 }
@@ -171,11 +170,11 @@ section#form-login form#login input:hover {
 
 section#form-login form#login input:focus,
 section#form-login form#login input:active {
-	border-color: #00a8ff;
+	border-color: #3267f9;
 }
 
 section#form-login form#login button {
-	background-color: #0097e6;
+	background-color: #3267f9;
 	padding: 10px 60px;
 	border: none;
 	border-radius: 6px;
@@ -282,7 +281,7 @@ section#form-login .about {
 }
 
 #player .listeners {
-	background: #0097e6;
+	background: #3267f9;
 	height: 50px;
 	color: white;
 	font-size: 14px;
@@ -318,7 +317,7 @@ section#form-login .about {
 /* Bootstrap */
 section#form-login form.login .form-group input:focus .input-group-text,
 section#form-login form.login .form-group input:active .input-group-text {
-	border: 1px solid #00a8ff!important;
+	border: 1px solid #3267f9!important;
 }
 
 .input-group-text {
