@@ -66,12 +66,10 @@ nav ul li.post button:active {
 }
 
 nav ul li.post:hover,
-nav ul li.post:focus,
 nav ul li.post:active {
-	background-color: white;
+	background-color: rgba(0,0,0,0.01);
 }
 
-nav ul li.post:focus button,
 nav ul li.post:active button {
 	background-color: #2855d0;
 }
