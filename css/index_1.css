@@ -5,7 +5,7 @@ body {
 	padding: 0 0 80px 0;
 }
 
-nav {
+nav.options {
 	position: fixed;
 	height: 50px;
 	width: 100%;
@@ -14,10 +14,10 @@ nav {
 	bottom: 0;
 	align-content: center;
 	align-items: center;
-	z-index: 9;
+	z-index: 1;
 }
 
-nav ul {
+nav.options ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -25,7 +25,7 @@ nav ul {
 	padding: 0;
 }
 
-nav ul li {
+nav.options ul li {
 	width: 20%;
 	font-size: 22px;
 	line-height: 46px;
@@ -35,15 +35,15 @@ nav ul li {
 	position: relative;
 }
 
-nav ul li:hover {
+nav.options ul li:hover {
 	background-color: rgba(0,0,0,0.05);
 }
 
-nav ul li:active {
+nav.options ul li:active {
 	background-color: rgba(0,0,0,0.15);
 }
 
-nav ul li.post button {
+nav.options ul li.post button {
 	background-color: #3267f9;
 	padding: 13px;
 	border-radius: 60px;
@@ -61,21 +61,21 @@ nav ul li.post button {
 	transition: all 0.2s;
 }
 
-nav ul li.post button:active {
+nav.options ul li.post button:active {
 	background-color: #2855d0;
 }
 
-nav ul li.post:hover,
-nav ul li.post:active {
+nav.options ul li.post:hover,
+nav.options ul li.post:active {
 	background-color: rgba(0,0,0,0.01);
 }
 
-nav ul li.post:active button {
+nav.options ul li.post:active button {
 	background-color: #2855d0;
 }
 
 header {
-	padding: 25px 20px;
+	padding: 20px 20px;
 	display: inline-flex;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 }
@@ -115,6 +115,123 @@ header .buttons ul li.active::before {
 	right: -3px;
 }
 
+div#user-messages {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 100%;
+	overflow: scroll;
+}
+
+div#user-messages > .title {
+	background-color: rgba(0,0,0,0.01);
+	position: relative;
+	padding: 12px 10px 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+div#user-messages > .title i {
+	font-size: 20px;
+}
+ 
+div#user-messages > .title h1{
+	font-size: 14px;
+}
+
+div#user-messages .search {
+	padding: 12px 10px 12px 10px;
+	position: relative;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+div#user-messages .search input {
+	width: 100%;
+	padding: 8px 14px 8px 35px;
+	font-size: 12px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 6px;
+	outline: none;
+	transition: all 0.2s;
+}
+
+div#user-messages .search input:focus {
+	background-color: rgba(0,0,0,0.01);
+}
+
+div#user-messages .search i {
+	position: absolute;
+	top: 22px;
+	left: 20px;
+	cursor: pointer;
+}
+
+div#user-messages ul.list-users {
+	padding: 0;
+	list-style: none;
+}
+
+div#user-messages ul.list-users li.item {
+	background-image: linear-gradient(to right, white, white);
+	border-left: 0px solid transparent;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 10px;
+	transition: all 0.2s;
+}
+
+div#user-messages ul.list-users li.item:hover {
+	background-image: linear-gradient(to right, #e2eefc, white);
+	border-left: 5px solid #3267f9;
+	color: #3267f9;
+}
+
+div#user-messages ul.list-users li.item:last-child {
+	border-bottom: none;
+}
+
+div#user-messages ul.list-users li.item .user-image {
+	width: 34px;
+	height: 34px;
+	background-size: cover;
+	border-radius: 35px;
+	margin-right: 10px;
+}
+
+div#user-messages ul.list-users li.item .title h1 {
+	font-size: 13px;
+	font-weight: bold;
+	margin: 3px 0 0 0;
+}
+
+div#user-messages ul.list-users li.item .title div.resume {
+	display: flex;
+	flex-direction: row;
+	color: rgba(0,0,0,0.6);
+}
+
+div#user-messages ul.list-users li.item .title div.resume .text {
+	width: 150px;
+	font-size: 11px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0;
+}
+
+div#user-messages ul.list-users li.item .title div.resume .hour {
+	font-size: 11px;
+} 
+
+/* STORIES */
 div#stories {
 	background: rgba(0,0,0,0.02);
 	height: 76px;
