@@ -174,7 +174,6 @@ div#stories li .user-image.mine::before {
 }
 
 div#list-posts {
-	padding: 0 20px;
 }
 
 div#list-posts ul.posts {
@@ -183,12 +182,17 @@ div#list-posts ul.posts {
 }
 
 div#list-posts ul.posts li.item {
-	margin: 20px 0;
+	border-top: 1px solid rgba(0,0,0,0.1); 
+}
+
+div#list-posts ul.posts li.item:first-child {
+	border-top: none;
 }
 
 div#list-posts ul.posts li.item .title {
 	display: flex;
 	flex-direction: row;
+	padding: 13px 20px;
 }
 
 div#list-posts ul.posts li.item .title .user-image {
@@ -215,6 +219,7 @@ div#list-posts ul.posts li.item .title .texts p {
 	font-size: 12px;
 	font-weight: 600;
 	color: rgba(0,0,0,0.7);
+	margin: 0;
 }
 
 div#list-posts ul.posts li.item .image {
@@ -224,9 +229,8 @@ div#list-posts ul.posts li.item .image {
 div#list-posts ul.posts li.item .image .user-post {
 	background-position: center;
 	background-size: cover;
-	width: calc(100% + 75px);
+	width: 100%;
 	height: 350px;
-	margin-left: -40px;
 }
 
 div#list-posts ul.posts li.item .buttons {
@@ -236,20 +240,44 @@ div#list-posts ul.posts li.item .buttons {
 	position: relative;
 	align-items: center;
 	align-content: center;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
+	padding: 0 20px;
 }
 
 div#list-posts ul.posts li.item .buttons i {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 div#list-posts ul.posts li.item .buttons .like {
 	margin-right: 15px;
 }
 
+div#list-posts ul.posts li.item .buttons .like i.like-active {
+	color: #d10027;
+}
+
 div#list-posts ul.posts li.item .buttons .save {
 	position: absolute;
-	right: 0;
+	right: 20px;
+}
+
+div#list-posts ul.posts li.item .comments ul {
+	padding: 15px 20px;
+	list-style: none;
+}
+
+div#list-posts ul.posts li.item .comments ul li.user-comment {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 12px;
+}
+
+div#list-posts ul.posts li.item .comments ul li.all {
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.5);
 }
