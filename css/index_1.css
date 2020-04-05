@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+	font-family: 'Inter'!important;
+	padding: 0 0 80px 0;
+}
+
+nav {
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	background: #f1f1f1;
+	box-shadow: 1px 0 0 1px rgba(0,0,0,0.1);
+	bottom: 0;
+	align-content: center;
+	align-items: center;
+	z-index: 9;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	width: 20%;
+	font-size: 22px;
+	line-height: 46px;
+	text-align: center;
+	transition: all 0.2s;
+	cursor: pointer;
+	position: relative;
+}
+
+nav ul li:hover {
+	background-color: rgba(0,0,0,0.05);
+}
+
+nav ul li:active {
+	background-color: rgba(0,0,0,0.15);
+}
+
+nav ul li.post button {
+	background-color: #3267f9;
+	padding: 13px;
+	border-radius: 60px;
+	line-height: 20px;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 30px;
+	position: absolute;
+	top: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0 5px 15px 2px rgba(50,103,249,0.5);
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+nav ul li.post button:active {
+	background-color: #2855d0;
+}
+
+nav ul li.post:hover,
+nav ul li.post:focus,
+nav ul li.post:active {
+	background-color: white;
+}
+
+nav ul li.post:focus button,
+nav ul li.post:active button {
+	background-color: #2855d0;
+}
+
+header {
+	padding: 25px 20px;
+	display: inline-flex;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+header .logo {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+header .buttons {
+	color: black;
+	font-size: 25px;
+	float: right;
+	margin-top: -35px;
+}
+
+header .buttons ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+header .buttons ul li {
+	margin-left: 15px;
+	position: relative;
+}
+
+header .buttons ul li.active::before {
+	content: '';
+	background-color: #d10027;
+	width: 12px;
+	height: 12px;
+	border: 2px solid white;
+	border-radius: 12px;
+	position: absolute;
+	top: 0;
+	right: -3px;
+}
+
+div#stories {
+	background: rgba(0,0,0,0.02);
+	height: 76px;
+	line-height: 60px;
+	overflow: hidden;
+	padding: 0 35px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+div#stories ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+}
+
+div#stories li {
+	float: left;
+	margin: 5px 15px 0 0;
+	padding: 0;
+	cursor: pointer;
+}
+
+div#stories li .user-image {
+	width: 45px;
+	height: 45px;
+	border-radius: 40px;
+	background-color: #eff3f5;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+div#stories li .user-image.active {
+	border: 2px solid white;
+	box-shadow: 0 0 0 2px #3267f9;
+}
+
+div#stories li .user-image.mine::before {
+	content: url(../images/index/plus_storie.svg);
+	font-weight: bold;
+	font-size: 13px;
+	color: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	position: absolute;
+	bottom: 8px;
+	right: -8px;
+}
+
+div#list-posts {
+	padding: 0 20px;
+}
+
+div#list-posts ul.posts {
+	list-style: none;
+	padding: 0;
+}
+
+div#list-posts ul.posts li.item {
+	margin: 20px 0;
+}
+
+div#list-posts ul.posts li.item .title {
+	display: flex;
+	flex-direction: row;
+}
+
+div#list-posts ul.posts li.item .title .user-image {
+	width: 35px;
+	height: 35px;
+	background-position: center;
+	background-size: cover;
+	border-radius: 40px;
+	margin-right: 15px;
+}
+
+div#list-posts ul.posts li.item .title .texts {
+	display: flex;
+	flex-direction: column;
+}
+
+div#list-posts ul.posts li.item .title .texts h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+}
+
+div#list-posts ul.posts li.item .title .texts p {
+	font-size: 12px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.7);
+}
+
+div#list-posts ul.posts li.item .image {
+	position: relative;
+}
+
+div#list-posts ul.posts li.item .image .user-post {
+	background-position: center;
+	background-size: cover;
+	width: calc(100% + 75px);
+	height: 350px;
+	margin-left: -40px;
+}
+
+div#list-posts ul.posts li.item .buttons {
+	height: 45px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	align-items: center;
+	align-content: center;
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+div#list-posts ul.posts li.item .buttons i {
+	font-size: 16px;
+}
+
+div#list-posts ul.posts li.item .buttons .like {
+	margin-right: 15px;
+}
+
+div#list-posts ul.posts li.item .buttons .save {
+	position: absolute;
+	right: 0;
+}
